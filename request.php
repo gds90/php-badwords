@@ -1,5 +1,5 @@
 <?php
-// assegno i valori dei campi input alle variabili
+// assegno i valori dei campi input della Form alle variabili
 $paragrafo = $_GET['paragrafo'];
 $parola = $_GET['parola_censurata'];
 
@@ -20,13 +20,13 @@ $nuovo_paragrafo = str_replace($parola, '***', $paragrafo);
     <!-- mostro il paragrafo senza censurare le parole  -->
     <h1>With Badwords</h1>
     <div>
-        <?php echo $paragrafo; ?>
+        <p><?php echo $paragrafo; ?></p>
         <p>Lunghezza del paragrafo: <?php echo strlen($paragrafo) ?></p>
     </div>
     <!-- mostro il paragrafo con le parole censurate -->
     <h1>Without Badwords</h1>
     <div>
-        <?php echo $nuovo_paragrafo; ?>
+        <p><?php echo $nuovo_paragrafo; ?></p>
         <p>Lunghezza del paragrafo: <?php echo strlen($nuovo_paragrafo) ?></p>
     </div>
 </body>
